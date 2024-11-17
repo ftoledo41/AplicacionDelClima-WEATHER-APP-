@@ -1,0 +1,191 @@
+/* ESTILOS GENERALES */
+html, body {
+  height: 100%;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+	font-family: "Outfit", sans-serif;
+	background-color: #5498f2;
+	background-image: url('../images/bg-image.jpg');
+	background-size: cover;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+	background-color: rgba(10, 44, 91, 0.49);
+	border-radius: 10px;
+	color: #fff;
+	width: 100%;
+}
+
+h1 {
+	margin: 30px 0 44px;
+}
+
+input[type="text"] {
+	padding: 10px 1em;
+	width: 453px;
+	max-width: 100%;
+}
+
+#getWeatherButton {
+	background-color: orange;
+	color: #000000;
+	border: none;
+	padding: 11px 1em;
+	font-weight:500;
+	cursor: pointer;
+}
+
+#currentTemp {
+font-size: 4rem;
+}
+
+.results {
+  margin-top: 50px;
+}
+
+#currentTemp {
+font-size: 3.5rem;
+margin: 20px 0;
+}
+
+#weatherIcon {
+padding: 30px 0;
+}
+
+#currentDate {
+padding: 12px 0;
+}
+
+#description {
+	font-size: 2rem;
+}
+.errorMessage {
+	font-size: 1.3rem;
+}
+
+#moreInfo p {
+	font-size: 1.5rem;
+	line-height: 1.8;
+}
+
+.spinner {
+	border: 2px solid rgba(80, 73, 73, 0.1);
+	border-left-color: #ffffff;
+	border-right-color: #ffffff;
+	border-top-color: #ffffff;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	animation: spin 1s linear infinite;
+	position: absolute;
+	top: 59%;
+	left: 48%;
+	transform: translate(-50%, -50%);
+	margin: 1px auto;
+}
+  
+  @keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+  }
+
+  #snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from { bottom: 0; opacity: 0; }
+    to { bottom: 30px; opacity: 1; }
+}
+
+@keyframes fadein {
+    from { bottom: 0; opacity: 0; }
+    to { bottom: 30px; opacity: 1; }
+}
+
+@-webkit-keyframes fadeout {
+    from { bottom: 30px; opacity: 1; }
+    to { bottom: 0; opacity: 0; }
+}
+
+@keyframes fadeout {
+    from { bottom: 30px; opacity: 1; }
+    to { bottom: 0; opacity: 0; }
+}
+
+  @media only screen and (max-width: 600px) {
+	.container {
+	  max-width: 90%;
+	}
+
+	#currentTemp {
+		font-size: 3rem;
+	}
+
+	#getWeatherButton {
+		margin: 30px 0 0;
+	}
+  
+	input[type="text"] {
+	  width: 100%;
+	}
+  }
+  
+  @media only screen and (max-width: 400px) {
+	input[type="text"] {
+	  width: 80%;
+	}
+  }
